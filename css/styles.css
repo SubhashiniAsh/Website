@@ -1,0 +1,323 @@
+.header {
+  display: block;
+  position:relative;
+  margin-left: 15px;
+  margin-right: auto;
+  max-width: 100%;
+  max-height: 100vh;
+  overflow: hidden;
+  text-align: center;
+
+}
+.image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+
+body {
+  background-color: black;
+  opacity: 1;
+  margin: 0;
+  margin-left: 0px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: black;
+}
+
+
+
+/* Increase the font size of the <h1> element */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Ensure proper sizing */
+* {
+  box-sizing: border-box;
+}
+
+/* Column container */
+
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+  height: 100vh;
+  margin-left: 0px;
+  margin-right: 0px;
+  opacity: 0.8;
+
+}
+
+
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 30%; /* Set the width of the sidebar */
+  background-color: white; /* Grey background color */
+  padding: 0px; /* Some padding */
+  text-align:center;
+  position:relative;
+  overflow: hidden;
+
+
+}
+.image2{
+  max-width: auto;
+  max-height: 100%;
+  object-fit: contain;
+}
+.text-block {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  background-color: white;
+  color: black;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-style: italic;
+  font-size: 10vh;
+  opacity: 0.3;
+}
+
+/* Main column */
+.main {
+  flex: 70%; /* Set the width of the main content */
+  background-color: white; /* White background color */
+  padding: 20px; /* Some padding */
+  overflow: hidden;
+  text-align: justify;
+  font-style: italic;
+}
+
+/* Hoverable Side bar */
+/* Style the links inside the sidenav */
+#mySidenav a {
+  position: absolute; /* Position them relative to the browser window */
+  left: -80px; /* Position them outside of the screen */
+  transition: 0.3s; /* Add transition on hover */
+  padding: 15px; /* 15px padding */
+  width: 100px; /* Set a specific width */
+  text-decoration: none; /* Remove underline */
+  font-size: 20px; /* Increase font size */
+  color: black; /* White text color */
+  border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
+  z-index: 1;
+}
+
+#mySidenav a:hover {
+  left: 0; /* On mouse-over, make the elements appear as they should */
+}
+
+/* The about link: 20px from the top with a green background */
+.ab {
+  top: 20px;
+  background-color: #ffffff;
+}
+
+.bl {
+  top: 80px;
+  background-color: #ffffff; /* Blue */
+}
+
+.tr {
+  top: 140px;
+  background-color: #ffffff; /* Red */
+}
+
+.gal {
+  top: 200px;
+  background-color: #ffffff
+   /* Light Black */
+}
+
+
+
+.header:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 8vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+.light_row > .light_column {
+  padding: 25vh 8px;
+  height: 90vh;
+
+}
+
+.light_row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.light_column {
+  float: left;
+  width: 25%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow:hidden;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+img {
+  margin-bottom: -4px;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 20px 16px;
+  color: white;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.gallerybox{
+  color: white;
+  padding: 0vh;
+  margin: 0;
+  font-style: italic;
+  font-size: 10vh;
+  text-align:center;
+}
+
+.slideimage{
+  display: block;
+  margin:0;
+  width: 100%;
+  height: 50vh;
+  object-fit:cover;
+
+}
